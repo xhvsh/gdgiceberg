@@ -1,9 +1,11 @@
+/* this file contains only the iceberg for the background */
+
 .iceberg {
   min-height: 100dvh;
-  background: 
-    linear-gradient(#0000 50%, #066), 
-    linear-gradient(to top right, #0000 50%, #7cc 0) calc(50vw - 20vmin) calc(50vh + 7vmin) / 21vmin 100%, 
-    conic-gradient(at 18.5vmin 0, #0000 43%, #9cc 0) 50vw 50dvh / 50% 100%, 
+  background:
+    linear-gradient(#0000 50%, #066),
+    linear-gradient(to top right, #0000 50%, #7cc 0) calc(50vw - 20vmin) calc(50vh + 7vmin) / 21vmin 100%,
+    conic-gradient(at 18.5vmin 0, #0000 43%, #9cc 0) 50vw 50dvh / 50% 100%,
     #c1e7f0;
   background-repeat: no-repeat;
   position: absolute;
@@ -23,20 +25,21 @@
   left: 50%;
   translate: -50% -30%;
   clip-path: polygon(0% 40%, 18% 18%, 28% 23%, 50% 0, 70% 15%, 75% 21%, 85% 22%, 98% 30%, 100% 40%, 80% 60%, 80% 80%, 55% 100%, 30% 83%, 20% 65%, 4% 50%);
-  background: 
-    radial-gradient(farthest-side at 53% 55%, #fffa, #fff0 70%), 
-    linear-gradient(#0000 50%, #0005), 
-    conic-gradient(from -25deg at 25% 27%, #97d7e0 50deg, #0000 0), 
-    conic-gradient(from 25deg at 59% 27%, #97d7e0 47deg, #0000 0), 
-    conic-gradient(from -15deg at 54% 60%, #97d7e0 140deg, #0000 0) 0 0 / 100% 17%, 
-    conic-gradient(from 30deg at 39% 26%, #c8e9ee 30deg, #0000 0), 
-    conic-gradient(from 62deg at 53% 55%, #37949c 45deg, #51b0bb 0 85deg, #0000 0), 
-    conic-gradient(from 15deg at 69% 57%, #97d7e0 47deg, #0000 0), 
-    conic-gradient(from 70deg at 53% 89%, #37949c 105deg, #97d7e0 0 222deg, #0000 0), 
-    conic-gradient(from 122deg at 53% 55%, #87c7cc 58deg, #a1e5e4 0 173deg, #0000 0), 
+  background:
+    radial-gradient(farthest-side at 53% 55%, #fffa, #fff0 70%),
+    linear-gradient(#0000 50%, #0005),
+    conic-gradient(from -25deg at 25% 27%, #97d7e0 50deg, #0000 0),
+    conic-gradient(from 25deg at 59% 27%, #97d7e0 47deg, #0000 0),
+    conic-gradient(from -15deg at 54% 60%, #97d7e0 140deg, #0000 0) 0 0 / 100% 17%,
+    conic-gradient(from 30deg at 39% 26%, #c8e9ee 30deg, #0000 0),
+    conic-gradient(from 62deg at 53% 55%, #37949c 45deg, #51b0bb 0 85deg, #0000 0),
+    conic-gradient(from 15deg at 69% 57%, #97d7e0 47deg, #0000 0),
+    conic-gradient(from 70deg at 53% 89%, #37949c 105deg, #97d7e0 0 222deg, #0000 0),
+    conic-gradient(from 122deg at 53% 55%, #87c7cc 58deg, #a1e5e4 0 173deg, #0000 0),
     #fff;
   background-repeat: no-repeat;
 }
+
 .iceberg::after {
   content: "";
   width: 100%;
@@ -44,18 +47,21 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  background: 
-    radial-gradient(farthest-side at 50% -50%, #0000 calc(100% - 1px), #25aeb488) 50% 0 / 5vmin 2vmin repeat-x, 
+  background:
+    radial-gradient(farthest-side at 50% -50%, #0000 calc(100% - 1px), #25aeb488) 50% 0 / 5vmin 2vmin repeat-x,
     linear-gradient(#0000 2vmin, #25aeb488 0, #25aeb488);
-
   animation: waveMove 30s linear infinite;
 }
 
 @keyframes waveMove {
   0% {
-    background-position: 0 0, 0 0;
+    background-position:
+      0 0,
+      0 0;
   }
   100% {
-    background-position: 100% 0, 0 0;
+    background-position:
+      100% 0,
+      0 0;
   }
 }

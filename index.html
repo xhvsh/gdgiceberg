@@ -1,17 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GDG Iceberg</title>
     <link rel="shortcut icon" href="./img/gdg.webp" type="image/x-icon" />
-
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <!-- Styles -->
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./iceberg.css" />
+    <!-- Scripts -->
     <script src="./script.js" defer></script>
   </head>
   <body>
-    <div class="iceberg"></div>
-    <div class="container"></div>
+    <div class="iceberg" aria-hidden="true"></div>
+
+    <div id="loader" class="loader" aria-live="polite" aria-label="Loading content">
+      <div class="loader__spinner"></div>
+      <p class="loader__text">Loading content…</p>
+    </div>
+
+    <div id="error-state" class="error-state" hidden>
+      <div class="error-icon">⚠️</div>
+      <p>Could not load data.<br />Check your connection and try again.</p>
+      <button id="retry-btn">Retry</button>
+    </div>
+
+    <div class="container" id="container" aria-label="Iceberg items"></div>
+
+    <div id="tooltip-portal" class="tooltip-portal" role="tooltip" aria-hidden="true"></div>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top" hidden>▲</button>
   </body>
 </html>

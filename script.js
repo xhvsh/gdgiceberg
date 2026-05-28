@@ -33,7 +33,7 @@ function positionTooltip(card) {
 function showTooltip(card, text) {
   activeCard = card;
   const isEmpty = !text || text.trim() === "";
-  tooltipPortal.innerHTML = isEmpty ? "<em>No explanation yet</em>" : text;
+  tooltipPortal.innerHTML = isEmpty ? "<em>Sambor nie dodał jeszcze opisu.</em>" : text;
   tooltipPortal.setAttribute("aria-hidden", "false");
 
   tooltipPortal.style.visibility = "hidden";
